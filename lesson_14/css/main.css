@@ -1,0 +1,107 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url("https://www.bravotv.com/sites/bravo/files/field_blog_image/2018/02/jet-set-uk-england-great-britain-promote.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 325px;
+  width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  border: 1px solid burlywood;
+  box-shadow: 6px 8px 24px 6px rgba(255, 255, 207, 1);
+}
+
+.select {
+  width: 190px;
+}
+
+.list {
+  margin-left: -1px;
+  width: 190px;
+  background: darkred !important;
+  ;
+}
+
+.list li:hover {
+  color: #162841 !important;
+}
+
+.selects-block {
+  width: 50%;
+}
+
+.select {
+  margin-bottom: 30px;
+  background-color: #162841;
+  color: wheat;
+}
+
+.info-block {
+  width: 50%;
+  background-color: #162841;
+  padding: 30px;
+  border-radius: 20px;
+  color: wheat;
+}
+
+.info-block-row {
+  display: flex;
+  flex-direction: row
+}
+
+.info-block-col {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+.select-second {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.info-block-name {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.info-block-sky {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.info-block-temp {
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.info-block-minTemp {
+  margin-right: 5px;
+}
+
+span {
+  font-size: 18px;
+}

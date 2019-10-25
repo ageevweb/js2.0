@@ -1,0 +1,7 @@
+.myDiv{
+  width: 150px;
+  height: 150px;
+  background-color: blueviolet;
+  display: inline-block;
+  margin-right: 10px;
+}

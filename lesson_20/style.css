@@ -1,0 +1,101 @@
+.container  {
+    width: 100%;
+}
+
+section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #444;
+}
+
+.block {
+    width: 75px;
+    height: 75px;
+    margin: 25px;
+    border: 2px solid #333;
+}
+
+.active {
+    background: orange;
+}
+
+.hide {
+    display: none;
+}
+
+.keyboard{
+    padding: 5px;
+    border-radius: 9px;
+    margin-top: 10px;
+    border: 1px solid black;
+    background: #c6cad0;
+    width: fit-content;
+}
+
+.keyboard-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.key{
+    width: 60px;
+    height: 60px;
+    background: whitesmoke;
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 9px;
+    padding: 7px;
+}
+
+.w100{
+    width: 100px;
+}
+.w120{
+    width: 120px;
+}
+.df{
+    display: flex;
+    flex: 1;
+}
+
+.w155{
+    width: 155px;
+}
+.p0{
+    padding: 0;
+    border: none;
+}
+
+.key-double-up,
+.key-double-down{
+    height: 50% ;
+    padding: 2px;
+}
+
+
+.key-double-up{
+    margin: 0;
+    border-radius: 9px 9px 0 0;
+    border-bottom: 1px solid black;
+}
+
+.key-double-down{
+    margin: 0;
+    border-radius:0 0 9px 9px ;
+
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.color-r{
+    color: rebeccapurple;
+    font-weight: 800;
+}
+
+.CapsLock{
+    background-color:grey !important;
+}
