@@ -147,7 +147,7 @@ window.addEventListener('storage', function(e){
 // Task 14 ============================================
 /*  Добавьте функцию t13, которая при загрузке страницы проверяет наличие card в LS и если есть 
 -выводит его на страницу. Если нет - пишет корзина пуста. */
-
+// localStorage.clear()
 
 
 const card = {
@@ -155,76 +155,84 @@ const card = {
     'grape': 2
 }
 
+
+
 t11();
+
 
 function t10() {
     localStorage.setItem('card', JSON.stringify(card));
-    // t11();
+    t11();
 }
 document.querySelector('.b-10').onclick = t10;
 
+
 function t11() {
     let d = localStorage.getItem('card');
-        d = JSON.parse(d);
-    
+    d = JSON.parse(d);
+
+    let c='';
+
     for(let key in d) {
-        document.querySelector('.out-10').innerHTML += `<div class="wrap-item" data-item="${key}">
-                                                            <span class="table">${key}</span>
-                                                            <span class="table btnMinus">-</span>                                                           
-                                                            <span class="table">${d[key]}</span>                                                           
-                                                            <span class="table btnPlus">+</span>
-                                                        </div>`
+        c+= `<div class="wrap-item" >
+                <span class="table" >${key}</span>
+                <span class="table" data-item="${key}" onclick="minus()">-</span>                                                           
+                <span class="table">${d[key]}</span>                                                           
+                <span class="table btnPlus" data-item="${key}">+</span>
+            </div>`
     }
+    document.querySelector('.out-10').innerHTML = c;
 }
 
-let btnMinus = document.querySelectorAll('.btnMinus');
-let btnPlus = document.querySelectorAll('.btnPlus');
 
-btnMinus.forEach(elem => {
-    elem.onclick = () => {
+// function minus(){
 
-        let it = elem.parentNode.getAttribute('data-item');
+//     // let it = this.getAttribute('data-item')
+//     console.log(this)
+ 
 
-        let d = localStorage.getItem('card');
-        d = JSON.parse(d);
+//     // let d = localStorage.getItem('card');
+//     // d = JSON.parse(d);
 
-        for(let key in d) {
-            if (key == it){
-                d[key]--;
-                if(d[key] == 0){
-                    delete d[key];
-                }
-            }
-        }
-        localStorage.setItem('card', JSON.stringify(d));
-
-        // t11();
-    };
-});
+//     // for(let key in d) {
+//     //     if (key == it){
+//     //         d[key]--;
+//     //         if(d[key] == 0){
+//     //             delete d[key];
+//     //         }
+//     //     }
+//     // }
+//         // t11() 
 
 
-btnPlus.forEach(elem => {
-    elem.onclick = () => {
 
-        let it = elem.parentNode.getAttribute('data-item');
+function minus(){
+    let it = this.getAttribute('data-item')
+    console.log(it)
+    
+}
 
-        let d = localStorage.getItem('card');
-        d = JSON.parse(d);
 
-        for(let key in d) {
-            if (key == it){
-                d[key]++;
-                if(d[key] == 0){
-                    delete d[key];
-                }
-            }
-        }
-        localStorage.setItem('card', JSON.stringify(d));
 
-        // t11();
-    };
-});
 
+// function total(){
+//     let d = localStorage.getItem('card');
+//         d = JSON.parse(d);
+
+//         count = 0;
+
+//         for(let key in d) {
+//             count = count + d[key];
+//         }
+//         console.log(count);
+
+//         if(count == 0){
+//             document.querySelector('.total').innerHTML = '';
+//         } else {
+//             document.querySelector('.total').innerHTML = count;
+//         }   
+// }
+// total();
 
 
 
