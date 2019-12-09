@@ -50,3 +50,7 @@ section {
 .wrap-item{
     display: flex;
 }
+
+.btnMinus, .btnPlus{
+    cursor: pointer;
+}
