@@ -93,11 +93,11 @@ u5.forEach(elem => {
 // Task 6 ============================================
 /*  Дана строка str6='helloworld' - преобразуйте ее в массив и присвойте a6_res. Выведите на страницу. Запускаться решение должно при вызове функции t6. */
 function t6() {
-    str6 = 'helloworld';
+    let str6 = 'helloworld';
 
-    a6_res = str6.split('')
+    str6 = str6.split('')
+    a6_res = str6
     document.querySelector('.out-6').innerHTML = a6_res;
-    console.log(a6_res);
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -121,9 +121,10 @@ document.querySelector('.b-7').onclick = t7;
 
 // Task 8 ============================================
 /*  Дан массив a8 = [1,2,66,77,15] - преобразуйте ее в строку. Разделитель - дефис. Результат присвойте a8_res. Запускаться решение должно при вызове функции t8. */
-a8 = [1,2,66,77,15];
 
 function t8() {
+    let a8 = [1,2,66,77,15];
+
     a8_res = a8.join('-');
     document.querySelector('.out-8').innerHTML = a8_res;
 }
@@ -133,12 +134,13 @@ document.querySelector('.b-8').onclick = t8;
 
 
 // Task 9 ============================================
-/*  Дан массив a9 = [[hi, mahai], [test, best]] - преобразуйте его в строку. Разделитель - дефис. Результат присвойте a9_res. Запускаться решение должно при вызове функции t9. 
-Допускается лишний дефис в конце строки!!! */
-let a9 = [['hi', 'mahai'], ['test', 'best']];
+/*  Дан массив a9 = [[hi, mahai], [test, best]] - преобразуйте его в строку. Разделитель - дефис. Результат присвойте a9_res. 
+Запускаться решение должно при вызове функции t9. Допускается лишний дефис в конце строки!!! */
 
 function t9() {
+    let a9 = [['hi', 'mahai'], ['test', 'best']];
     let m = [];
+
     for(i=0; i < a9.length; i++){
         a9[i].forEach(elem => {
             m.push(elem);
@@ -147,7 +149,6 @@ function t9() {
     a9_res = m.join('-');
     document.querySelector('.out-9').innerHTML = a9_res;
 }
-
 document.querySelector('.b-9').onclick = t9;
 
 
@@ -157,16 +158,15 @@ document.querySelector('.b-9').onclick = t9;
 /*  Дан массив a10 = {name: ivan, age: 15, sex: 1, id: 45} - преобразуйте его в GET строку (GET параметры). 
 Найдите описание что такое GET строка самостоятельно. Разделитель - амперсанд. Результат присвойте a10_res. 
 Запускаться решение должно при вызове функции t10. Допускается лишний амперсанд в конце строки!!! */
-let a10 = {name: 'ivan', age: 15, sex: 1, id: 45};
 
 function t10() {
+    let a10 = {name: 'ivan', age: 15, sex: 1, id: 45};
     m = [];
+
     for(let key in a10){
         m.push(`${key}=${a10[key]}`);
     }
     a10_res = m.join('&');
     document.querySelector('.out-10').innerHTML = a10_res;
-
-    console.log(a10_res)
 }
 document.querySelector('.b-10').onclick = t10;
